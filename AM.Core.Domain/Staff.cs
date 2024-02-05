@@ -19,6 +19,10 @@ namespace AM.Core.Domain
                 
 
         }
+        public override string GetPassengerType()
+        {
+            return "I'm a Staff";
+        }
     }
 }
 

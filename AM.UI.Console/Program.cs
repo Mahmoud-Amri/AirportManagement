@@ -15,3 +15,11 @@ Plane plane2 = new Plane() { Capacity = 77, MyPlaneType = PlaneType.Airbus };
 Console.WriteLine(plane);
 Console.WriteLine(plane1);
 Console.WriteLine(plane2);
+Passenger passenger = new Passenger();
+Passenger passenger1 = new Traveller();
+Passenger passenger2 = new Staff();
+Console.WriteLine(passenger.GetPassengerType());
+Console.WriteLine(passenger1.GetPassengerType());
+Console.WriteLine(passenger2.GetPassengerType());
+
+

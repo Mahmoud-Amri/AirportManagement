@@ -13,6 +13,11 @@ namespace AM.Core.Domain
                 + "Nationality:" + Nationality;
                 
          }
+
+        public override string GetPassengerType()
+        {
+            return "I'm a traveler";
+        }
     }
 }
 
