@@ -1,0 +1,12 @@
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/bin/Debug/net6.0/AM.Core.Domain.deps.json
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/bin/Debug/net6.0/AM.Core.Domain.dll
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/bin/Debug/net6.0/AM.Core.Domain.pdb
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/obj/Debug/net6.0/AM.Core.Domain.csproj.AssemblyReference.cache
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/obj/Debug/net6.0/AM.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/obj/Debug/net6.0/AM.Core.Domain.AssemblyInfoInputs.cache
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/obj/Debug/net6.0/AM.Core.Domain.AssemblyInfo.cs
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/obj/Debug/net6.0/AM.Core.Domain.csproj.CoreCompileInputs.cache
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/obj/Debug/net6.0/AM.Core.Domain.dll
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/obj/Debug/net6.0/refint/AM.Core.Domain.dll
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/obj/Debug/net6.0/AM.Core.Domain.pdb
+/Users/macbook/Projects/AirportManagement/AM.Core.Domain/obj/Debug/net6.0/ref/AM.Core.Domain.dll
