@@ -11,7 +11,7 @@ public class Flight
 
     public DateTime EffectiveArrival { get; set; }
 
-    public DateTime EstimatedDuration { get; set; }
+    public int EstimatedDuration { get; set; }
 
     public Plane MyPlane { get; set; }
 
