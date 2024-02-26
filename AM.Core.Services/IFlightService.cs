@@ -13,6 +13,6 @@ namespace AM.Core.Services
         double GetDurationAverage(string destination);
         IList<Flight> SortFlights();
         IList<Passenger> GetThreeOlderTravellers(Flight flight);
-        void ShowGroupedFlights(string destination);
+        void ShowGroupedFlights();
     }
 }

@@ -55,6 +55,7 @@ namespace AM.Core.Services
                 .TakeLast(3)
                 .ToList();
         }
+        
 
         public int GetWeeklyFlightNumber(DateTime date)
         {

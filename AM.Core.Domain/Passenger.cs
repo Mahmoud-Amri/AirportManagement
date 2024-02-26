@@ -23,6 +23,9 @@ namespace AM.Core.Domain
         public string PasseportNumber { get; set; }
 
         public string EmailAdress { get; set; }
+        
+        public int PassengerId { get; set; }
+
 
         public string FirstName { get; set; }
 

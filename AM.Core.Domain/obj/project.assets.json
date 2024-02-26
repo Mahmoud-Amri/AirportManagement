@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/macbook/Projects/AirportManagement/AM.Core.Domain/AM.Core.Domain.csproj",
+      "projectUniqueName": "/Users/macbook/RiderProjects/AirportManagement/AM.Core.Domain/AM.Core.Domain.csproj",
       "projectName": "AM.Core.Domain",
-      "projectPath": "/Users/macbook/Projects/AirportManagement/AM.Core.Domain/AM.Core.Domain.csproj",
+      "projectPath": "/Users/macbook/RiderProjects/AirportManagement/AM.Core.Domain/AM.Core.Domain.csproj",
       "packagesPath": "/Users/macbook/.nuget/packages/",
-      "outputPath": "/Users/macbook/Projects/AirportManagement/AM.Core.Domain/obj/",
+      "outputPath": "/Users/macbook/RiderProjects/AirportManagement/AM.Core.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/macbook/.nuget/NuGet/NuGet.Config"
