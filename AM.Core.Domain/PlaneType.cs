@@ -1,10 +1,7 @@
-﻿using System;
-namespace AM.Core.Domain
-{
-	public enum PlaneType
-    {
-		Boing,
-		Airbus
-	}
-}
+﻿namespace AM.Core.Domain;
 
+public enum PlaneType
+{
+    Boing,
+    Airbus
+}

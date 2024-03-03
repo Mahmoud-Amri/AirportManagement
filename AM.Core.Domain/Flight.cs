@@ -1,4 +1,7 @@
-﻿namespace AM.Core.Domain;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AM.Core.Domain;
+
 public class Flight
 {
     public string Destination { get; set; }
@@ -13,6 +16,9 @@ public class Flight
 
     public int EstimatedDuration { get; set; }
 
+    public int PlaneFK { get; set; }
+
+    [ForeignKey("PlaneFK")]
     public Plane MyPlane { get; set; }
 
     public IList<Passenger> Passengers { get; set; }
@@ -20,11 +26,10 @@ public class Flight
     public override string ToString()
     {
         return "EffectiveArrival:" + EffectiveArrival
-            + "EstimatedDuration:" + EstimatedDuration
-            + "FlightDate:" + FlightDate
-            + "Destination:" + Destination
-            + "Departure:" + Departure
-            + "FlightId:" + FlightId;
+                                   + "EstimatedDuration:" + EstimatedDuration
+                                   + "FlightDate:" + FlightDate
+                                   + "Destination:" + Destination
+                                   + "Departure:" + Departure
+                                   + "FlightId:" + FlightId;
     }
 }
-
