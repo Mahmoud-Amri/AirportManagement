@@ -5,6 +5,7 @@ public class Passenger
 {
     private int age;
     [DataType(DataType.Date)]
+    [Display(Name = "Date of birth ")]
     public DateTime BirthDate { get; set; }
 
     public int Age
@@ -18,7 +19,7 @@ public class Passenger
     }
 
     [Key]
-    [StringLength(7)]
+    [StringLength(7)] // stringlength temchi cote front w fama MaxMinLenghth temchi cote base
     public string PasseportNumber { get; set; }
 
     [EmailAddress]

@@ -1,4 +1,5 @@
 using AM.Core.Domain;
+using AM.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
 
 namespace AM.Data;
@@ -15,5 +16,30 @@ public class AMContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlite("Data Source=database.sqlite");
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(new PlaneConfig());
+        modelBuilder.ApplyConfiguration(new FlightConfig());
+        
+        //tp4 qst 9 methode 3 sans utiliteser les conventions 
+        // foreach (var entity in modelBuilder.Model.GetEntityTypes())
+        // {
+        //     foreach (var prop in entity.GetProperties())
+        //     {
+        //         if (prop.GetType() == typeof(DateTime))
+        //         {
+        //             prop.SetColumnType("date");
+        //         }
+        //     }
+        // }
+        
+    }
+
+    protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+    {
+        //configurationBuilder.Properties<String>().HaveMaxLength(30);
+        configurationBuilder.Properties<DateTime>().HaveColumnType("date");
     }
 }

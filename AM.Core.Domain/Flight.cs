@@ -1,11 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AM.Core.Domain;
 
 public class Flight
 {
+    
     public string Destination { get; set; }
-
+     
     public string Departure { get; set; }
 
     public DateTime FlightDate { get; set; }
@@ -16,7 +18,7 @@ public class Flight
 
     public int EstimatedDuration { get; set; }
 
-    public int PlaneFK { get; set; }
+    public int? PlaneFK { get; set; }
 
     [ForeignKey("PlaneFK")]
     public Plane MyPlane { get; set; }

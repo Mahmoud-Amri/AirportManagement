@@ -660,6 +660,17 @@
         "runtime": {
           "AM.Core.Domain.dll": {}
         }
+      },
+      "AM.Data/1.0.0": {
+        "dependencies": {
+          "AM.Core.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.9",
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.9"
+        },
+        "runtime": {
+          "AM.Data.dll": {}
+        }
       }
     }
   },
@@ -1055,6 +1066,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "AM.Core.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AM.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
