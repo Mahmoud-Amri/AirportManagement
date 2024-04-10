@@ -2565,11 +2565,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/macbook/RiderProjects/AirportManagement/AM.UI.Console/AM.UI.Console.csproj",
+      "projectUniqueName": "/Users/macbook/RiderProjects/AirportManagement-last/AM.UI.Console/AM.UI.Console.csproj",
       "projectName": "AM.UI.Console",
-      "projectPath": "/Users/macbook/RiderProjects/AirportManagement/AM.UI.Console/AM.UI.Console.csproj",
+      "projectPath": "/Users/macbook/RiderProjects/AirportManagement-last/AM.UI.Console/AM.UI.Console.csproj",
       "packagesPath": "/Users/macbook/.nuget/packages/",
-      "outputPath": "/Users/macbook/RiderProjects/AirportManagement/AM.UI.Console/obj/",
+      "outputPath": "/Users/macbook/RiderProjects/AirportManagement-last/AM.UI.Console/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/macbook/.nuget/NuGet/NuGet.Config"
@@ -2585,11 +2585,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/macbook/RiderProjects/AirportManagement/AM.Core.Domain/AM.Core.Domain.csproj": {
-              "projectPath": "/Users/macbook/RiderProjects/AirportManagement/AM.Core.Domain/AM.Core.Domain.csproj"
+            "/Users/macbook/RiderProjects/AirportManagement-last/AM.Core.Domain/AM.Core.Domain.csproj": {
+              "projectPath": "/Users/macbook/RiderProjects/AirportManagement-last/AM.Core.Domain/AM.Core.Domain.csproj"
             },
-            "/Users/macbook/RiderProjects/AirportManagement/AM.Data/AM.Data.csproj": {
-              "projectPath": "/Users/macbook/RiderProjects/AirportManagement/AM.Data/AM.Data.csproj"
+            "/Users/macbook/RiderProjects/AirportManagement-last/AM.Data/AM.Data.csproj": {
+              "projectPath": "/Users/macbook/RiderProjects/AirportManagement-last/AM.Data/AM.Data.csproj"
             }
           }
         }

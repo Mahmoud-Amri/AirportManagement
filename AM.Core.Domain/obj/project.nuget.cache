@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FXTUEbcncx/bm7AnDXwfHljXHq7pKWH0Rvmz/Qjjo01eKbHvrK1ATi5VQEpIBK4ZKNbBNn30WP+0w45F3EuYFg==",
+  "dgSpecHash": "cbV2JqmLoR8G71UY6NhA+/6qT0zYBMXRIv1xIVub7BelMKpTYPUmBNTXQL7h5rfpcNG9E+Wruic5KM4KNfeM4A==",
   "success": true,
-  "projectFilePath": "/Users/macbook/RiderProjects/AirportManagement/AM.Core.Domain/AM.Core.Domain.csproj",
+  "projectFilePath": "/Users/macbook/RiderProjects/AirportManagement-last/AM.Core.Domain/AM.Core.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -28,36 +28,36 @@ public class Passenger
 
     [MinLengthAttribute(3) ]
     [MaxLengthAttribute(25)] 
-    public string FirstName { get; set; }
-
-    public string LastName { get; set; }
+    // public string FirstName { get; set; }
+    // public string LastName { get; set; }
+    public FullName MyFullName { get; set; }
 
     [RegularExpression(@"^[0-9]{8}$",ErrorMessage ="invalid phone number")]
 
     public string TelNumber { get; set; }
 
-    public IList<Flight> Flights { get; set; }
-
+    //public IList<Flight> Flights { get; set; }
+    public IList<Reservation> Reservations { get; set; }
     public override string ToString()
     {
         return "BirthDate:" + BirthDate
                             + "PasseportNumber:" + PasseportNumber
                             + "EmailAdress:" + EmailAdress
-                            + "FirstName:" + FirstName
-                            + "LastName:" + LastName
+                            + "FirstName:" + MyFullName.FirstName
+                            + "LastName:" + MyFullName.LastName
                             + "TelNumber:" + TelNumber;
     }
 
     public bool CheckProfile(string FirstName, string LastName)
     {
-        return this.FirstName == FirstName && this.LastName == LastName;
+        return this.MyFullName.FirstName == FirstName && this.MyFullName.LastName == LastName;
     }
 
     public bool CheckProfile(string FirstName, string LastName, string EmailAdress = null)
     {
         if (EmailAdress == null)
-            return this.FirstName == FirstName && this.LastName == LastName;
-        return this.FirstName == FirstName && this.LastName == LastName && this.EmailAdress == EmailAdress;
+            return this.MyFullName.FirstName == FirstName && this.MyFullName.LastName == LastName;
+        return this.MyFullName.FirstName == FirstName && this.MyFullName.LastName == LastName && this.EmailAdress == EmailAdress;
     }
 
     public virtual string GetPassengerType()

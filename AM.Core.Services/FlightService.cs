@@ -48,7 +48,7 @@ public class FlightService : IFlightService
 
     public IList<Passenger> GetThreeOlderTravellers(Flight flight)
     {
-        return flight.Passengers.OrderByDescending(p => p.Age)
+        return flight.Reservations.Select(r => r.MyPassenger).OrderByDescending(p => p.Age)
             .TakeLast(3)
             .ToList();
     }

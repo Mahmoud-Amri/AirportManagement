@@ -23,8 +23,8 @@ public class Flight
     [ForeignKey("PlaneFK")]
     public Plane MyPlane { get; set; }
 
-    public IList<Passenger> Passengers { get; set; }
-
+    //public IList<Passenger> Passengers { get; set; }
+    public IList<Reservation> Reservations { get; set; }
     public override string ToString()
     {
         return "EffectiveArrival:" + EffectiveArrival

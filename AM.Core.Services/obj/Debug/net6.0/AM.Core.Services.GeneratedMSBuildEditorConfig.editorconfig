@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AM.Core.Services
-build_property.ProjectDir = /Users/macbook/RiderProjects/AirportManagement/AM.Core.Services/
+build_property.ProjectDir = /Users/macbook/RiderProjects/AirportManagement-last/AM.Core.Services/

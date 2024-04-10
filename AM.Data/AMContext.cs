@@ -22,6 +22,8 @@ public class AMContext : DbContext
     {
         modelBuilder.ApplyConfiguration(new PlaneConfig());
         modelBuilder.ApplyConfiguration(new FlightConfig());
+        modelBuilder.ApplyConfiguration(new PassengerConfig());
+        modelBuilder.ApplyConfiguration(new ReservationConfig());
         
         //tp4 qst 9 methode 3 sans utiliteser les conventions 
         // foreach (var entity in modelBuilder.Model.GetEntityTypes())
