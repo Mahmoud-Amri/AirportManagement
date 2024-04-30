@@ -13,7 +13,7 @@ public class FlightConfig : IEntityTypeConfiguration<Flight>
         //     .UsingEntity(asso => asso.ToTable("Reservation"));
         builder.HasOne(f => f.MyPlane)
             .WithMany(p => p.Flights)
-            .HasForeignKey(f => f.PlaneFK)
+            .HasForeignKey(f => f.PlaneId)
             .OnDelete(DeleteBehavior.SetNull);
     }
 }

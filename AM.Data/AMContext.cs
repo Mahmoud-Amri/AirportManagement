@@ -16,6 +16,7 @@ public class AMContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlite("Data Source=database.sqlite");
+        optionsBuilder.UseLazyLoadingProxies(true);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -1,69 +1,111 @@
-﻿namespace AM.Core.Domain;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Passenger
+namespace AM.Core.Domain
 {
-    private int age;
-    [DataType(DataType.Date)]
-    [Display(Name = "Date of birth ")]
-    public DateTime BirthDate { get; set; }
-
-    public int Age
+    public class Passenger
     {
-        get
-        {
-            if (DateTime.Now < BirthDate.AddYears(age)) age--;
+        [DataType(DataType.DateTime,ErrorMessage ="date non valide"),Display(Name = "date of birth")]
+        public DateTime BirthDate { get; set; }
 
-            return age;
+        private int age;
+       // public int passengerId { get; set; }
+        public int Age {
+
+            get
+            {
+                age = DateTime.Now.Year - BirthDate.Year;
+                //if (DateTime.Now.Month < BirthDate.Month )
+                //{
+                    //age--;
+                //}
+                //if(DateTime.Now.Month == BirthDate.Month && DateTime.Now.Day < BirthDate.Day)
+                //{
+                    //age--;
+               // }
+                
+                //proposition 2
+                if(DateTime.Now< BirthDate.AddYears(age))
+                {
+                    age--;
+                }
+
+
+                return age;
+            }
+        
         }
-    }
+        [Key,MaxLength(7,ErrorMessage ="Taille maximale 7"),//controle dans bd
+            MinLength(7, ErrorMessage = "Taille mainimale 7"),//controle dans bd
+            //StringLength(7,MinimumLength =7, ErrorMessage ="taille 7")//controle au niveau de front
+            ]
+        public string PassportNumber { get; set; }
+        [EmailAddress(ErrorMessage ="email invalide")]
+        public string EmailAddress { get; set; }
+        [MaxLength(25, ErrorMessage = "taille maximale 25"), MinLength(3, ErrorMessage = "taille minimale 3")]
+        // public string FirstName { get; set; }
+        //public string LastName { get; set; }
 
-    [Key]
-    [StringLength(7)] // stringlength temchi cote front w fama MaxMinLenghth temchi cote base
-    public string PasseportNumber { get; set; }
+        public FullName MyFullName { get; set; }
 
-    [EmailAddress]
-    public string EmailAdress { get; set; }
-
-
-    [MinLengthAttribute(3) ]
-    [MaxLengthAttribute(25)] 
-    // public string FirstName { get; set; }
-    // public string LastName { get; set; }
-    public FullName MyFullName { get; set; }
-
-    [RegularExpression(@"^[0-9]{8}$",ErrorMessage ="invalid phone number")]
-
-    public string TelNumber { get; set; }
-
-    //public IList<Flight> Flights { get; set; }
-    public IList<Reservation> Reservations { get; set; }
-    public override string ToString()
-    {
-        return "BirthDate:" + BirthDate
-                            + "PasseportNumber:" + PasseportNumber
-                            + "EmailAdress:" + EmailAdress
-                            + "FirstName:" + MyFullName.FirstName
-                            + "LastName:" + MyFullName.LastName
-                            + "TelNumber:" + TelNumber;
-    }
-
-    public bool CheckProfile(string FirstName, string LastName)
-    {
-        return this.MyFullName.FirstName == FirstName && this.MyFullName.LastName == LastName;
-    }
-
-    public bool CheckProfile(string FirstName, string LastName, string EmailAdress = null)
-    {
-        if (EmailAdress == null)
-            return this.MyFullName.FirstName == FirstName && this.MyFullName.LastName == LastName;
-        return this.MyFullName.FirstName == FirstName && this.MyFullName.LastName == LastName && this.EmailAdress == EmailAdress;
-    }
-
-    public virtual string GetPassengerType()
-    {
+        [Phone(ErrorMessage ="num tel invalide")]
+        public string TelNumber { get; set; }
+        //public IList<Flight> Flights { get; set; }
+        public virtual IList<Reservation> Reservations { get; set; }
+        public override string ToString()
         {
-            return "I'm a passenger";
+            return "BirthDate: "+ BirthDate
+                + "PassportNumber: "+ PassportNumber
+                + "EmailAddress: "+ EmailAddress
+                + "FirstName: "+ MyFullName.FirstName
+                + "LastName: "+ MyFullName.LastName
+                + "TelNumber: "+ TelNumber;
         }
+        public bool CheckProfile(string firstName, string lastName)
+        {
+            
+            return this.MyFullName.FirstName == firstName && this.MyFullName.LastName == lastName;
+
+        }
+
+        /*
+         * * Overloaded method to check profile with additional email address parameter.
+         * * This method is currently commented out, but it can be uncommented and used if needed.
+         */
+        //public bool CheckProfile(string firstName, string lastName,string emailAddress)
+        //{
+
+        //  return this.FirstName == firstName && this.LastName == lastName && this.EmailAddress == emailAddress;
+
+        // }
+
+        /*
+         * * Method to check profile with optional email address parameter.
+         * * If the email address is provided, it is also checked against the current profile's email address.
+         */
+        public bool CheckProfile(string firstName, string lastName, string emailAddress = null)
+        {
+            if(emailAddress == null)
+            {
+                return this.MyFullName.FirstName == firstName && this.MyFullName.LastName == lastName;
+            }
+            else
+            {
+                return this.MyFullName.FirstName == firstName && this.MyFullName.LastName == lastName && this.EmailAddress == emailAddress;
+            }
+          
+        }
+        public virtual string GetPassengerType()
+        {
+            // Return a string indicating that the object is a passenger
+            return "I am a passenger";
+        }
+
+
+
     }
 }
