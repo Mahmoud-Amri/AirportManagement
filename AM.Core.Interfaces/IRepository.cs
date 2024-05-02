@@ -15,6 +15,9 @@ namespace AM.Core.Interfaces
         void Update(T entity);
         void Delete(T t);
         IList<T> GetAll();
+        
+        T GetById(params object[] keyValues);
+
         //  void Save();
     }
 }

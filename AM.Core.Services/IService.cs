@@ -13,5 +13,9 @@ namespace AM.Core.Services
         void Update(T t);
         void Delete(T t);
         IList<T> GetAll();
+        T GetById(params object[] id);
+        void Commit();
+
+
     }
 }

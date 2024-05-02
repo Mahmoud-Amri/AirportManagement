@@ -9,14 +9,14 @@ namespace AM.Core.Services
 {
     public interface IFlightService :  IService<Flight>
     {
-        IList<DateTime> GetFlightDates(String destination);
-        IList<Flight> GetFlights(string filterType, string filterValue);
+        List<DateTime> GetFlightDates(String destination);
+        void GetFlights(string filterType, string filterValue);
         void ShowFlightDetails(Plane plane);
         int GetWeeklyFlightNumber(DateTime startDate);
-        float GetDurationAverage(string destination);
-        IList<Flight> SortFlights();
-        IList<Passenger> GetThreeOlderTravellers(Flight flight);
-        void ShowGroupedFlights();
+        double GetDurationAverage(string destination);
+        IEnumerable<Flight> SortFlights();
+        IEnumerable<String> GetThreeOlderTravellers(Flight flight);
+        IEnumerable<IGrouping<string, Flight>> ShowGroupedFlights();
         /* void Add(Flight flight);
          void Delete(Flight flight);
 

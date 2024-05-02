@@ -40,6 +40,23 @@ namespace AM.Core.Services
             return repository.GetAll();
         }
 
+        public T GetById(params object[] id)
+        {
+            return repository.GetById(id);
+
+        }
+
+        public void Commit()
+        {
+            try
+            {
+                unitOfWork.Save();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
         public void Update(T t)
         {
             repository.Update(t);
